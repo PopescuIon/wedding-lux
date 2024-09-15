@@ -1,236 +1,210 @@
 <style>
-.wedding-lux-container {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.main-content {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  min-height: 1440px;
-  width: 100%;
-}
-
-@media (max-width: 991px) {
-  .main-content {
-    max-width: 100%;
+  .wedding-lux {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-bottom: 29px;
   }
-}
 
-.background-image {
-  position: absolute;
-  inset: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.header {
-  position: relative;
-  background-color: #fff;
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  color: #1d1c34;
-  justify-content: center;
-  padding: 1px 0;
-  font: 700 30px/45px Ubuntu, sans-serif;
-}
-
-@media (max-width: 991px) {
   .header {
+    align-items: center;
+    background-color: #fff;
+    color: #201d52;
+    display: flex;
+    font: 700 22px Ubuntu, sans-serif;
+    justify-content: space-between;
+    padding: 20px 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo {
+    aspect-ratio: 6.33;
+    object-fit: contain;
+    object-position: center;
+    width: 200px;
     max-width: 100%;
   }
-}
 
-.header-content {
-  background-color: #fff;
-  z-index: 10;
-  display: flex;
-  margin-bottom: -15px;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 70px;
-}
+  .nav-menu {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
 
-@media (max-width: 991px) {
-  .header-content {
+  .nav-link {
+    color: #201d52;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    color: #4a4684;
+  }
+
+  .contact-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .phone-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 24px;
+  }
+
+  .phone-number {
+    margin: auto 0;
+  }
+
+  .main-content {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 171px 80px;
+    position: relative;
+    text-align: center;
+    margin-top: 80px;
+  }
+
+  .background-image {
+    height: 100%;
+    inset: 0;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    width: 100%;
+  }
+
+  .content-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     max-width: 100%;
-    margin-bottom: 10px;
-    padding: 0 20px;
+    position: relative;
+    width: 837px;
   }
-}
 
-.header-wrapper {
-  display: flex;
-  width: 100%;
-  max-width: 1900px;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-@media (max-width: 991px) {
-  .header-wrapper {
+  .content-logo {
+    aspect-ratio: 1.5;
     max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+    width: 344px;
   }
-}
 
-.logo {
-  aspect-ratio: 6.37;
-  object-fit: contain;
-  object-position: center;
-  width: 414px;
-  max-width: 100%;
-}
+  .tagline {
+    font-size: 26px;
+    margin-top: 24px;
+  }
 
-.contact-info {
-  align-self: start;
-  display: flex;
-  margin-top: 5px;
-  gap: 30px;
-}
+  .announcement {
+    align-self: stretch;
+    font-size: 35px;
+    margin-top: 60px;
+  }
 
-.phone-icon {
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 49px;
-}
+  .call-to-action {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 20px;
+  }
 
-.phone-number {
-  align-self: start;
-  flex-basis: auto;
-}
-
-.slider-section {
-  position: relative;
-  display: flex;
-  margin-top: 15px;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  font-family: Montserrat, sans-serif;
-  color: #fff;
-  text-align: center;
-  justify-content: center;
-  padding: 139px 80px;
-}
-
-@media (max-width: 991px) {
-  .slider-section {
+  .social-icon {
+    aspect-ratio: 1;
+    margin-top: 36px;
     max-width: 100%;
-    padding: 100px 20px;
+    object-fit: contain;
+    object-position: center;
+    width: 154px;
   }
-}
 
-.slider-content {
-  display: flex;
-  margin-bottom: -23px;
-  width: 1195px;
-  max-width: 100%;
-  flex-direction: column;
-  align-items: center;
-}
-
-@media (max-width: 991px) {
-  .slider-content {
-    margin-bottom: 10px;
+  .visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
   }
-}
 
-.slider-image {
-  aspect-ratio: 1.5;
-  object-fit: contain;
-  object-position: center;
-  width: 522px;
-  max-width: 100%;
-}
+  @media (max-width: 991px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
 
-.slider-title {
-  font-size: 50px;
-  font-weight: 400;
-  align-self: stretch;
-  margin-top: 97px;
-}
+    .nav-menu {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
 
-@media (max-width: 991px) {
-  .slider-title {
-    max-width: 100%;
-    margin-top: 40px;
-    font-size: 40px;
+    .contact-info {
+      margin-top: 20px;
+    }
+
+    .main-content {
+      margin-right: 2px;
+      max-width: 100%;
+      padding: 100px 20px;
+    }
+
+    .content-wrapper {
+      margin-bottom: 10px;
+    }
+
+    .announcement {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+
+    .call-to-action {
+      font-size: 40px;
+      line-height: 1.3;
+      max-width: 100%;
+    }
   }
-}
-
-.slider-subtitle {
-  font-size: 80px;
-  font-weight: 700;
-  line-height: 90px;
-  margin-top: 25px;
-}
-
-@media (max-width: 991px) {
-  .slider-subtitle {
-    max-width: 100%;
-    font-size: 40px;
-    line-height: 50px;
-  }
-}
-
-.instagram-icon {
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 222px;
-  margin-top: 65px;
-  max-width: 100%;
-}
-
-@media (max-width: 991px) {
-  .instagram-icon {
-    margin-top: 40px;
-  }
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
 </style>
-<section class="wedding-lux-container">
-  <div class="main-content">
-    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6315b10d4f0bfedc18fe69f70f5b500ed0972d1fcd5623cfc69c9b92a1ea2da8?apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8&" alt="" class="background-image" />
-    <header class="header">
-      <div class="header-content">
-        <div class="header-wrapper">
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6a144900fbc4a823d5d04fd5adac194235cfa586b834f2bd63327ccf62ee333d?apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8&" alt="Wedding Lux Logo" class="logo" />
-          <div class="contact-info">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/528fb8667f499bb8cc9fcbcee2b7f4c2c0dc9eda3bca9d5ee3c8c5174f05c952?apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8&" alt="Phone Icon" class="phone-icon" />
-            <p class="phone-number">+39 320 877 9328</p>
-          </div>
-        </div>
-      </div>
-    </header>
-    <section class="slider-section">
-      <div class="slider-content">
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/09e07f95fc4fa8a29f04c8dafe823437e4b3b3673c54a860aefd3a810c959461?apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8&" alt="Decorative Image" class="slider-image" />
-        <h2 class="slider-title">Stiamo perfezionando la nostra presenza online.</h2>
-        <p class="slider-subtitle">Nel frattempo seguiteci<br />su Instagram!</p>
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/dc27fe7ae940fae9249e0cdccca0575142949d94a5dcd0eebcc686c9510d8221?apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8&" alt="Instagram Icon" class="instagram-icon" />
-      </div>
-    </section>
-  </div>
+
+<section class="wedding-lux">
+  <header class="header">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/dbfcfa9485f464851737048a876a23f3d8c3c33b1bc670d9a522ffc2a1df2bca?placeholderIfAbsent=true&apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8" alt="Wedding Lux Logo" class="logo" />
+    
+    <div class="contact-info">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/23862ee60e352795d4278db5f4542019b5d7cca3bd0a8bdaa78e89e072f20e5f?placeholderIfAbsent=true&apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8" alt="" class="phone-icon" />
+      <span class="phone-number">+39 320 877 9328</span>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d3873017ec85860faf0e393719ea3dc0a60d35db4192729613afa6603609c626?placeholderIfAbsent=true&apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8" alt="Elegant wedding background" class="background-image" />
+    <div class="content-wrapper">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/711d36465844b7d6788af8297a7104261e89d6e7247143e47ae1e1bf5e6f4f19?placeholderIfAbsent=true&apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8" alt="Wedding Lux Emblem" class="content-logo" />
+      <h1 class="tagline">Weddings, Ceremonies & Events</h1>
+      <p class="announcement">Stiamo perfezionando la nostra presenza online.</p>
+      <p class="call-to-action">Nel frattempo seguiteci <br /> su Instagram!</p>
+      <a href="#" aria-label="Follow us on Instagram">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d96f2859233990b52ebd0d0edeb8a07abcc2f4ce14588adb625c9175fa56df39?placeholderIfAbsent=true&apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8" alt="Instagram Icon" class="social-icon" />
+      </a>
+    </div>
+  </main>
 </section>
