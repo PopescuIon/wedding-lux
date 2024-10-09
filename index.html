@@ -53,8 +53,7 @@
     display: flex;
     gap: 10px;
     align-items: center;
-    justify-content: flex-end; /* Align to the right by default */
-    margin-right: 0; /* Default margin */
+    margin-left: -20px; /* Move the contact info slightly to the left */
   }
 
   .phone-icon {
@@ -189,31 +188,8 @@
   /* For larger screens (desktops) */
   @media (min-width: 992px) {
     .contact-info {
-      margin-right: auto; /* Move contact info to the left */
+      margin-right: 0; /* Keep contact info aligned to the right */
+      margin-left: -20px; /* Move slightly left */
     }
   }
 </style>
-
-<section class="wedding-lux">
-  <header class="header">
-    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/dbfcfa9485f464851737048a876a23f3d8c3c33b1bc670d9a522ffc2a1df2bca?placeholderIfAbsent=true&apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8" alt="Wedding Lux Logo" class="logo" />
-    
-    <div class="contact-info">
-      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/23862ee60e352795d4278db5f4542019b5d7cca3bd0a8bdaa78e89e072f20e5f?placeholderIfAbsent=true&apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8" alt="" class="phone-icon" />
-      <span class="phone-number">+39 320 877 9328</span>
-    </div>
-  </header>
-
-  <main class="main-content">
-    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d3873017ec85860faf0e393719ea3dc0a60d35db4192729613afa6603609c626?placeholderIfAbsent=true&apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8" alt="Elegant wedding background" class="background-image" />
-    <div class="content-wrapper">
-      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/711d36465844b7d6788af8297a7104261e89d6e7247143e47ae1e1bf5e6f4f19?placeholderIfAbsent=true&apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8" alt="Wedding Lux Emblem" class="content-logo" />
-      <h1 class="tagline">Weddings, Ceremonies & Events</h1>
-      <p class="announcement">Stiamo perfezionando la nostra presenza online.</p>
-      <p class="call-to-action">Nel frattempo seguiteci <br /> su Instagram!</p>
-      <a href="#" aria-label="Follow us on Instagram">
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d96f2859233990b52ebd0d0edeb8a07abcc2f4ce14588adb625c9175fa56df39?placeholderIfAbsent=true&apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8" alt="Instagram Icon" class="social-icon" />
-      </a>
-    </div>
-  </main>
-</section>
