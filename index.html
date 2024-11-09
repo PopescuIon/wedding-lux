@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding-top: 100px; /* Add padding to avoid content being hidden behind fixed header */
+  padding-top: 100px; /* Padding to avoid content being hidden behind fixed header */
 }
 
 .header {
@@ -75,7 +75,7 @@
   font-family: Montserrat, sans-serif;
   font-weight: 400;
   justify-content: center;
-  min-height: 1080px;
+  min-height: 100vh; /* Ensure full height on mobile */
   padding: 171px 80px;
   position: relative;
   text-align: center;
@@ -148,6 +148,10 @@
 
   .contact-info {
     justify-content: center;
+  }
+
+  .main-content {
+    padding: 100px 20px; /* Adjust padding for smaller screens */
   }
 }
 </style>
