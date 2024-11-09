@@ -1,54 +1,70 @@
 <style>
-.wedding-lux {
+.wedding-lux-container {
   background-color: #fff;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding-bottom: 29px;
+  padding-top: 100px; /* Add padding to avoid content being hidden behind fixed header */
 }
 
 .header {
-  align-items: center;
   background-color: #fff;
   color: #201d52;
   display: flex;
-  font: 700 26px Ubuntu, sans-serif;
-  justify-content: space-between;
-  padding: 30px 70px;
-  width: 96%;
+  justify-content: center;
+  padding: 35px 70px;
+  width: 100%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  font: 700 22px Ubuntu, sans-serif;
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.header-content {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  max-width: 1544px;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .logo {
   aspect-ratio: 6.33;
   object-fit: contain;
   object-position: center;
-  width: 240px;
+  width: 354px;
   max-width: 100%;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-item {
+  font-size: 18px;
+  color: #201d52;
+  text-decoration: none;
 }
 
 .contact-info {
   display: flex;
-  gap: 15px;
+  gap: 23px;
   align-items: center;
-  margin-left: -20px;
 }
 
 .phone-icon {
   aspect-ratio: 1;
   object-fit: contain;
   object-position: center;
-  width: 30px;
+  width: 32px;
 }
 
 .phone-number {
-  margin: auto 0;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .main-content {
@@ -59,29 +75,24 @@
   font-family: Montserrat, sans-serif;
   font-weight: 400;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 1080px;
   padding: 171px 80px;
   position: relative;
   text-align: center;
-  margin-top: 100px;
-}
-
-.background-image {
-  height: 100%;
-  inset: 0;
-  object-fit: cover;
-  object-position: center;
-  position: absolute;
-  width: 100%;
+  background-image: url('https://cdn.builder.io/api/v1/image/assets/0bca8f5a69044fd1a9b3b90152ffc1d8/d3873017ec85860faf0e393719ea3dc0a60d35db4192729613afa6603609c626?apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8&');
+  background-size: cover;
+  background-position: center;
 }
 
 .content-wrapper {
   align-items: center;
   display: flex;
   flex-direction: column;
+  margin-bottom: -31px;
   max-width: 100%;
   position: relative;
   width: 837px;
+  z-index: 1; /* Brings content above the background */
 }
 
 .content-logo {
@@ -92,133 +103,73 @@
   width: 344px;
 }
 
-.tagline {
-  font-size: 30px;
-  margin-top: 30px;
+.service-description {
+  font-size: 26px;
+  margin-top: 24px;
 }
 
 .announcement {
   align-self: stretch;
-  font-size: 40px;
-  margin-top: 70px;
+  font-size: 35px;
+  margin-top: 60px;
 }
 
 .call-to-action {
-  font-size: 70px;
+  font-size: 60px;
   font-weight: 700;
-  line-height: 1.2;
-  margin-top: 30px;
+  line-height: 70px;
+  margin-top: 20px;
 }
 
 .social-icon {
   aspect-ratio: 1;
-  margin-top: 45px;
+  margin-top: 36px;
   max-width: 100%;
   object-fit: contain;
   object-position: center;
-  width: 180px;
-}
-
-.visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+  width: 154px;
 }
 
 @media (max-width: 991px) {
   .header {
+    padding: 20px;
+  }
+  
+  .header-content {
     flex-direction: column;
     align-items: center;
-    padding: 25px;
+    text-align: center;
+    gap: 10px;
   }
 
   .logo {
-    width: 180px;
-    margin-bottom: 15px;
+    width: 250px; /* Smaller logo size for mobile */
   }
 
   .contact-info {
-    margin-top: 15px;
-    margin-left: 0;
-  }
-
-  .phone-icon {
-    width: 24px;
-  }
-
-  .phone-number {
-    font-size: 20px;
-  }
-
-  .main-content {
-    margin-right: 2px;
-    max-width: 100%;
-    padding: 120px 20px 60px;
-    margin-top: 80px;
-  }
-
-  .content-wrapper {
-    margin-bottom: 15px;
-  }
-
-  .content-logo {
-    width: 260px;
-  }
-
-  .tagline {
-    font-size: 24px;
-    margin-top: 20px;
-  }
-
-  .announcement {
-    font-size: 32px;
-    margin-top: 40px;
-  }
-
-  .call-to-action {
-    font-size: 40px;
-    line-height: 1.3;
-    margin-top: 20px;
-  }
-
-  .social-icon {
-    width: 120px;
-    margin-top: 30px;
-  }
-}
-
-@media (min-width: 992px) {
-  .contact-info {
-    margin-right: 0;
-    margin-left: -20px;
+    justify-content: center;
   }
 }
 </style>
 
-<section class="wedding-lux">
+<section class="wedding-lux-container">
   <header class="header">
-    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/dbfcfa9485f464851737048a876a23f3d8c3c33b1bc670d9a522ffc2a1df2bca?placeholderIfAbsent=true&apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8" alt="Wedding Lux Logo" class="logo" />
-    <div class="contact-info">
-      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/23862ee60e352795d4278db5f4542019b5d7cca3bd0a8bdaa78e89e072f20e5f?placeholderIfAbsent=true&apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8" alt="" class="phone-icon" aria-hidden="true" />
-      <span class="phone-number">+39 320 877 9328</span>
+    <div class="header-content">
+      <img src="https://cdn.builder.io/api/v1/image/assets/0bca8f5a69044fd1a9b3b90152ffc1d8/dbfcfa9485f464851737048a876a23f3d8c3c33b1bc670d9a522ffc2a1df2bca?apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8&" alt="Wedding Lux Logo" class="logo" />
+      <div class="contact-info">
+        <img src="https://cdn.builder.io/api/v1/image/assets/0bca8f5a69044fd1a9b3b90152ffc1d8/23862ee60e352795d4278db5f4542019b5d7cca3bd0a8bdaa78e89e072f20e5f?apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8&" alt="Phone Icon" class="phone-icon" />
+        <span class="phone-number">+39 320 877 9328</span>
+      </div>
     </div>
   </header>
-
+  
   <main class="main-content">
-    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d3873017ec85860faf0e393719ea3dc0a60d35db4192729613afa6603609c626?placeholderIfAbsent=true&apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8" alt="Elegant wedding background" class="background-image" />
     <div class="content-wrapper">
-      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/711d36465844b7d6788af8297a7104261e89d6e7247143e47ae1e1bf5e6f4f19?placeholderIfAbsent=true&apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8" alt="Wedding Lux Emblem" class="content-logo" />
-      <h1 class="tagline">Weddings, Ceremonies & Events</h1>
+      <img src="https://cdn.builder.io/api/v1/image/assets/0bca8f5a69044fd1a9b3b90152ffc1d8/711d36465844b7d6788af8297a7104261e89d6e7247143e47ae1e1bf5e6f4f19?apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8&" alt="Wedding Lux Content Logo" class="content-logo" />
+      <h1 class="service-description">Weddings, Ceremonies & Events</h1>
       <p class="announcement">Stiamo perfezionando la nostra presenza online.</p>
-      <p class="call-to-action">Nel frattempo seguiteci <br /> su Instagram!</p>
-      <a href="#" aria-label="Follow us on Instagram">
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d96f2859233990b52ebd0d0edeb8a07abcc2f4ce14588adb625c9175fa56df39?placeholderIfAbsent=true&apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8" alt="Instagram Icon" class="social-icon" />
-      </a>
+      <p class="call-to-action">Nel frattempo seguiteci<br />su Instagram!</p>
+      <img src="https://cdn.builder.io/api/v1/image/assets/0bca8f5a69044fd1a9b3b90152ffc1d8/d96f2859233990b52ebd0d0edeb8a07abcc2f4ce14588adb625c9175fa56df39?apiKey=0bca8f5a69044fd1a9b3b90152ffc1d8&" alt="Instagram Icon" class="social-icon" />
     </div>
   </main>
 </section>
