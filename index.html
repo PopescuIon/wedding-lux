@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding-top: 120px; /* Adjust padding to avoid content being hidden behind the larger fixed header */
+  padding-top: 130px; /* Adjust padding for larger fixed header */
 }
 
 .header {
@@ -12,7 +12,7 @@
   color: #201d52;
   display: flex;
   justify-content: center;
-  padding: 40px 80px;
+  padding: 50px 80px;
   width: 100%;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   font: 700 22px Ubuntu, sans-serif;
@@ -121,7 +121,7 @@
 
 @media (max-width: 991px) {
   .header {
-    padding: 30px 40px; /* Increase padding for a larger header on mobile */
+    padding: 40px 40px; /* Increase padding for a larger header on mobile */
   }
   
   .header-content {
@@ -132,20 +132,25 @@
   }
 
   .logo {
-    width: 320px; /* Increase logo size */
+    width: 340px; /* Increase logo size */
   }
 
   .contact-info {
     justify-content: center;
     gap: 20px;
+    flex-direction: column; /* Center items vertically */
   }
 
   .phone-icon {
-    width: 45px; /* Increase icon size for mobile */
+    width: 50px; /* Increase icon size for mobile */
   }
 
   .phone-number {
     font-size: 24px; /* Increase font size for mobile */
+  }
+
+  .social-icon {
+    width: 180px; /* Increase size of social icon */
   }
 }
 </style>
