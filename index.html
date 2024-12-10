@@ -132,35 +132,36 @@
 }
 
 @media (max-width: 991px) {
-  .header {
-    padding: 40px 40px; /* Increase padding for a larger header on mobile */
+ .header {
+    padding: 40px 20px;
+    text-align: center;
   }
 
   .header-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: column; /* Stack logo and contact info vertically */
+    align-items: center; /* Center align items */
     gap: 15px;
   }
 
   .logo {
-    width: 320px; /* Increase logo size */
+    width: 200px; /* Adjust size for mobile */
+    max-width: 100%;
   }
 
   .contact-info {
-    justify-content: center;
-    gap: 15px; /* Adjust gap between icon and number */
-    flex-direction: row; /* Keep in a single row */
+    flex-direction: row; /* Keep the icon and number in the same row */
+    gap: 10px; /* Space between icon and number */
+    align-items: center; /* Vertically align icon and number */
+    justify-content: center; /* Center horizontally */
   }
 
   .phone-icon {
-    width: 50px; /* Increase icon size for mobile */
+    width: 30px; /* Adjust size for mobile */
   }
 
   .phone-number {
-    font-size: 24px; /* Increase font size for mobile */
+    font-size: 16px; /* Adjust font size for better readability */
   }
-
   .social-icon {
     width: 180px; /* Increase size of social icon */
   }
