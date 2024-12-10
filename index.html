@@ -65,13 +65,24 @@
   font-family: Montserrat, sans-serif;
   font-weight: 400;
   justify-content: center;
-  min-height: 100vh; /* Ensure full height on mobile */
+  min-height: 100vh; /* Ensure full height for all screens */
   padding: 171px 80px;
   position: relative;
   text-align: center;
-  background-image: url('./img.jpg');
-  background-size: cover;
-  background-position: center;
+
+  /* Background Image Adjustments */
+  background-image: url('./1.jpg'); /* Ensure this path is correct */
+  background-size: cover; /* Keeps the background proportional */
+  background-repeat: no-repeat; /* Prevents image repetition */
+  background-position: center; /* Centers the image */
+ 
+}
+  @media (max-width: 768px) {
+  .main-content {
+    background-attachment: scroll; /* Prevents parallax issues on mobile */
+    background-size: cover; /* Ensures the image scales to fit the screen */
+    padding: 120px 40px; /* Adjust padding for smaller screens */
+  }
 }
 
 .content-wrapper {
