@@ -65,16 +65,19 @@
   font-family: Montserrat, sans-serif;
   font-weight: 400;
   justify-content: center;
-  min-height: 100vh; /* Ensure full height on mobile */
+  min-height: 100vh; /* Ensure full height for all screens */
   padding: 171px 80px;
   position: relative;
   text-align: center;
-  background-image: url('./1.jpg');
-  background-size: contain; /* Ensures the entire image fits without zooming */
-  background-repeat: no-repeat; /* Prevents tiling */
-  background-position: center;
-  background-attachment: fixed; /* Makes the image static (optional, for a parallax effect) */
+
+  /* Background Image Adjustments */
+  background-image: url('./1.jpg'); /* Ensure this path is correct */
+  background-size: cover; /* Keeps the background proportional */
+  background-repeat: no-repeat; /* Prevents image repetition */
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Creates a parallax effect */
 }
+
 
 .content-wrapper {
   align-items: center;
@@ -121,7 +124,13 @@
   object-position: center;
   width: 154px;
 }
-
+@media (max-width: 768px) {
+  .main-content {
+    background-attachment: scroll; /* Prevents parallax issues on mobile */
+    background-size: cover; /* Ensures the image scales to fit the screen */
+    padding: 120px 40px; /* Adjust padding for smaller screens */
+  }
+}
 @media (max-width: 991px) {
   .header {
     padding: 40px 40px; /* Increase padding for a larger header on mobile */
