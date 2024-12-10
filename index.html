@@ -70,8 +70,10 @@
   position: relative;
   text-align: center;
   background-image: url('./1.jpg');
-  background-size: cover;
+  background-size: contain; /* Ensures the entire image fits without zooming */
+  background-repeat: no-repeat; /* Prevents tiling */
   background-position: center;
+  background-attachment: fixed; /* Makes the image static (optional, for a parallax effect) */
 }
 
 .content-wrapper {
